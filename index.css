@@ -1,0 +1,164 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for the whole product section */
+  .product-container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  /* Product info section (title, price, description) */
+  .product-info {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+  }
+  
+  /* Carousel container */
+  .product-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* Carousel main area where large image is displayed */
+  .carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Main product image */
+  .carousel img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth image transitions */
+  }
+  
+  /* Carousel navigation buttons */
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  #prev-btn {
+    left: 10px;
+  }
+  
+  #next-btn {
+    right: 10px;
+  }
+  
+  /* Thumbnails section */
+  .thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Thumbnail images */
+  .thumbnails img {
+    width: 80px;
+    height: 80px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Highlight active thumbnail */
+  .thumbnails img.active {
+    opacity: 1;
+    border: 2px solid #000;
+  }
+  
+  /* Quantity selector */
+  .quantity-selector {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quantity-selector label {
+    margin-right: 10px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    /* Adjust product container padding for smaller screens */
+    .product-container {
+      padding: 20px;
+    }
+  
+    /* Ensure product info takes full width on smaller screens */
+    .product-info {
+      width: 100%;
+    }
+  
+    /* Main product image and carousel resizing for smaller screens */
+    .carousel img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Adjust thumbnail size on smaller screens */
+    .thumbnails img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    /* Adjust carousel button size on smaller screens */
+    .carousel button {
+      padding: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .thumbnails img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    /* Reduce button size on smaller screens */
+    .carousel button {
+      padding: 4px;
+    }
+  
+    /* Increase space between elements for small screens */
+    .quantity-selector {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .quantity-selector label {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  
